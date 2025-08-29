@@ -1,9 +1,25 @@
-node_modules
-.DS_Store
-dist
-dist-ssr
-*.local
-count.txt
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# production
+/build
+/dist
+/out
+
+# secret
+/secret
 .env
-.nitro
-.tanstack
+*.env
+
+# misc
+.DS_Store
+.vscode
+.idea
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
+.parcel-cache
+*.log
