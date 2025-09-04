@@ -1,4 +1,17 @@
+import { CareerService } from '@/services/career.service.ts'
+import CareerCard from '@/components/display/CareerCard.tsx'
+import { useEffect, useState } from 'react'
+import type { CareerItem } from '@/types/career.type.ts'
+
 export default function Career() {
+  const careerSvc = new CareerService()
+  const [items, setItems] = useState<CareerItem[]>([])
+  useEffect(() => {
+    const mounted = async () => {
+      setItems(await careerSvc.getCareerItemList())
+    }
+    mounted()
+  }, [])
   return (
     <main className="home-detail">
       <h2 className="text-2xl font-bold text-gray-800 mb-4">소개</h2>
@@ -33,13 +46,14 @@ export default function Career() {
           경험이 있습니다.
         </li>
       </ol>
-      <h2 className="text-2xl font-bold text-gray-800 mb-8">
-        기술 스텍
-      </h2>
+      <h2 className="text-2xl font-bold text-gray-800 mb-8">기술 스텍</h2>
 
-      <h2 className="text-2xl font-bold text-gray-800 mb-8">
-        경력 사항
-      </h2>
+      <h2 className="text-2xl font-bold text-gray-800 mb-8">경력 사항</h2>
+      <div className="career-list">
+        {items.map((item) => (
+          <CareerCard key={item.id} item={item} />
+        ))}
+      </div>
     </main>
   )
 }
