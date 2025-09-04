@@ -48,7 +48,7 @@ export default function LanguageSelect({
 
   return (
     <div className="language-select" ref={rootRef}>
-      <label className="label">Languages</label>
+      <label className="label mb-1">Languages</label>
       <div className={['select-input', open ? 'open' : ''].join(' ')}>
         <span className="user-select" onClick={toggleOptions}>
           {current.label}

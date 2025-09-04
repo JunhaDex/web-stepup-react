@@ -13,8 +13,8 @@ export default function Career() {
     mounted()
   }, [])
   return (
-    <main className="home-detail">
-      <h2 className="text-2xl font-bold text-gray-800 mb-4">소개</h2>
+    <main className="home-detail text-text-1">
+      <h2 className="text-2xl font-bold text-text-2 mb-4">소개</h2>
       <p>
         프론트엔드 개발자 김준하 입니다. 대규모 플랫폼 개발과 팀 리딩 경험을
         보유하고 있습니다. 3년 이상 파트장 및 팀장으로써 개발 프로세스 개선과
@@ -46,10 +46,10 @@ export default function Career() {
           경험이 있습니다.
         </li>
       </ol>
-      <h2 className="text-2xl font-bold text-gray-800 mb-8">기술 스텍</h2>
+      <h2 className="text-2xl font-bold text-text-2 mb-4">기술 스텍</h2>
 
-      <h2 className="text-2xl font-bold text-gray-800 mb-8">경력 사항</h2>
-      <div className="career-list">
+      <h2 className="text-2xl font-bold text-text-2 mb-4">경력 사항</h2>
+      <div className="career-list grid gap-4">
         {items.map((item) => (
           <CareerCard key={item.id} item={item} />
         ))}
