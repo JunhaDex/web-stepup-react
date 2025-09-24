@@ -11,3 +11,12 @@ export interface CareerItem {
   }
   description: string
 }
+
+export interface PortfolioItem {
+  id: number
+  title: string
+  link?: string
+  order: number
+  tags: string[]
+  description: string
+}
