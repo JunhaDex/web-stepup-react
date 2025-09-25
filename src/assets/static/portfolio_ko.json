@@ -20,7 +20,8 @@
       "React",
       "TypeScript",
       "Zustand",
-      "Vite"
+      "Vite",
+      "Dark Mode"
     ],
     "link": "https://demo.devudex.info/",
     "order": 2,
